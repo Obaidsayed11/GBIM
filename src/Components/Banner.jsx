@@ -24,31 +24,31 @@ const stats = [
 
 const Banner = () => {
   return (
-    <div className="relative">
-      {/* Banner Image */}
-      <div className="relative -mt-28">
-        <img src={Banners} alt="Banner" className="w-full object-cover" />
+    <div className="relative w-full">
+      {/* Banner Image + Floating Content */}
+      <div className="relative ">
+        <img src={Banners} alt="Banner" className="w-full object-cover max-h-[700px]" />
 
-        {/* Floating PNG Icons */}
-        <img src={banner1} alt="" className="absolute top-[32%] left-[17%] w-16 animate-float-slow" />
-        <img src={banner2} alt="" className="absolute top-[52%] left-[17%] w-20 animate-float-fast" />
-        <img src={banner3} alt="" className="absolute top-[52%] left-[29%] w-22 animate-float-slow" />
-        <img src={banner5} alt="" className="absolute top-[48%] left-[72%] w-18 animate-float-fast" />
-        <img src={banner4} alt="" className="absolute top-[42%] left-[82%] w-22 animate-float-slow" />
-        <img src={banner6} alt="" className="absolute top-[64%] left-[78%] w-18 animate-float-fast" />
+        {/* Floating PNG Icons (hide on small screens) */}
+        <img src={banner1} alt="" className="hidden md:block absolute top-[32%] left-[17%] w-10 md:w-16 animate-float-slow" />
+        <img src={banner2} alt="" className="hidden md:block absolute top-[52%] left-[17%] w-12 md:w-20 animate-float-fast" />
+        <img src={banner3} alt="" className="hidden md:block absolute top-[52%] left-[29%] w-14 md:w-22 animate-float-slow" />
+        <img src={banner5} alt="" className="hidden md:block absolute top-[48%] left-[72%] w-12 md:w-18 animate-float-fast" />
+        <img src={banner4} alt="" className="hidden md:block absolute top-[42%] left-[82%] w-14 md:w-22 animate-float-slow" />
+        <img src={banner6} alt="" className="hidden md:block absolute top-[64%] left-[78%] w-12 md:w-18 animate-float-fast" />
 
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-3xl md:text-5xl font-semibold text-[#0A132E] leading-snug">
+          <h1 className="text-xl sm:text-3xl md:text-5xl font-semibold text-[#0A132E] leading-snug">
             Strategic <span className="text-[#B22222] font-bold">Design</span>{' '}
-            <span className="text-[#4B0082] font-bold">Thinking</span> for Smarter<br />
+            <span className="text-[#4B0082] font-bold">Thinking</span> for Smarter<br className="hidden sm:block" />
             Digital Solutions
           </h1>
-          <div className="mt-6 flex gap-4 flex-wrap justify-center">
-            <button className="bg-[#0A132E] text-white px-6 py-2 rounded-full hover:bg-[#1b1b2e] transition">
+          <div className="mt-6 flex flex-wrap gap-4 justify-center">
+            <button className="bg-[#0A132E] text-white px-6 py-2 rounded-full hover:bg-[#1b1b2e] transition text-sm sm:text-base">
               Get service
             </button>
-            <button className="border border-[#0A132E] text-[#0A132E] px-6 py-2 rounded-full hover:bg-gray-100 transition">
+            <button className="border border-[#0A132E] text-[#0A132E] px-6 py-2 rounded-full hover:bg-gray-100 transition text-sm sm:text-base">
               Learn more
             </button>
           </div>
@@ -57,25 +57,26 @@ const Banner = () => {
 
       {/* Stats Navbar */}
       <div className="w-full flex items-center justify-center">
-  <nav className="w-[80%] bg-white rounded-xl shadow-lg -mt-24 z-10 flex justify-evenly items-center flex-wrap px-2 py-4">
-    {stats.map((stat, index) => (
-      <div key={index} className="flex items-center space-x-2 px-4 py-2 min-w-[180px] relative">
-        {/* Stat Icon + Content */}
-        <img src={stat.icon} alt="icon" className="w-10 h-10" />
-        <div className="p-1">
-          <h3 className="text-3xl font-bold text-[#0A132E]">{stat.count}</h3>
-          <p className="text-sm text-gray-600">{stat.label}</p>
-        </div>
+        <nav className="w-[90%] bg-white rounded-xl shadow-lg -mt-16 z-10 flex justify-evenly items-center flex-wrap px-2 py-4 gap-4">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="flex items-center space-x-2 px-4 py-2 min-w-[150px] md:min-w-[180px] relative"
+            >
+              <img src={stat.icon} alt="icon" className="w-8 h-8 md:w-10 md:h-10" />
+              <div className="p-1">
+                <h3 className="text-xl md:text-3xl font-bold text-[#0A132E]">{stat.count}</h3>
+                <p className="text-xs md:text-sm text-gray-600">{stat.label}</p>
+              </div>
 
-
-        {index < stats.length - 1 && (
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 h-12 border-r border-gray-300"></div>
-        )}
+              {/* Vertical Divider (hidden on last element & small screens) */}
+              {index < stats.length - 1 && (
+                <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-12 border-r border-gray-300"></div>
+              )}
+            </div>
+          ))}
+        </nav>
       </div>
-    ))}
-  </nav>
-</div>
-
     </div>
   );
 };

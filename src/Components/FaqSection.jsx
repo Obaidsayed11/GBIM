@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; // optional icon library
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const categories = ["Marketing Creatives", "Branding", "UI/UX Designing"];
 
@@ -11,19 +11,19 @@ const faqData = [
   },
   {
     question: "How can creative design thinking benefit my design projects?",
-    answer: "",
+    answer: "It ensures your project is user-focused and delivers impactful results by uncovering fresh perspectives.",
   },
   {
-    question: "How can creative design thinking benefit my design projects?",
-    answer: "",
+    question: "What industries benefit from creative design?",
+    answer: "Virtually all—from healthcare to finance to e-commerce. Any industry that values innovation and user satisfaction can benefit.",
   },
   {
-    question: "How can creative design thinking benefit my design projects?",
-    answer: "",
+    question: "Is creative design thinking suitable for startups?",
+    answer: "Absolutely. It helps startups uncover user needs early and build products with greater market fit.",
   },
   {
-    question: "How can creative design thinking benefit my design projects?",
-    answer: "",
+    question: "How do I implement design thinking in my team?",
+    answer: "Start with empathy exercises, collaborative brainstorming, rapid prototyping, and user feedback loops.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function FaqSection() {
   const [openQuestion, setOpenQuestion] = useState(0);
 
   return (
-    <div className="bg-[#FAFAFA] py-20 px-6 w-full">
+    <div className="bg-[#FAFAFA] py-20 px-4 sm:px-6 w-full">
       <div className="max-w-5xl mx-auto text-center space-y-6">
         <p className="text-xs tracking-[0.2em] uppercase text-gray-400">
           Frequently Asked Questions
@@ -43,12 +43,12 @@ export default function FaqSection() {
         </h2>
 
         {/* Category Tabs */}
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex flex-wrap justify-center gap-3 mt-6">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full text-xl font-medium transition-all ${
+              className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-lg font-medium transition-all ${
                 activeCategory === cat
                   ? "bg-gradient-to-r from-[#E84767] to-[#7851A9] text-white shadow-md"
                   : "bg-white border border-gray-300 text-gray-600"
@@ -60,28 +60,28 @@ export default function FaqSection() {
         </div>
 
         {/* FAQ List */}
-        <div className="space-y-4 mt-10">
+        <div className="space-y-4 mt-10 text-left">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className={`rounded-2xl px-6 py-5 text-left flex justify-between items-start transition-all ${
+              className={`rounded-2xl px-4 sm:px-6 py-5 flex justify-between items-start transition-all ${
                 openQuestion === index
                   ? "bg-[#9D1B23] text-white"
                   : "bg-[#F3F3F3] text-[#333]"
               }`}
             >
-              <div>
-                <h4 className="font-semibold text-xl">
+              <div className="flex-1">
+                <h4 className="font-semibold text-base sm:text-xl">
                   {faq.question}
                 </h4>
                 {openQuestion === index && faq.answer && (
-                  <p className="max-w-[90%] mt-2 text-sm leading-relaxed text-white">
+                  <p className="mt-2 text-sm leading-relaxed text-white max-w-full sm:max-w-[90%]">
                     {faq.answer}
                   </p>
                 )}
               </div>
               <button
-                className={`ml-4 mt-1 p-2 rounded-full transition-all ${
+                className={`ml-4 mt-1 p-2 rounded-full transition-all shrink-0 ${
                   openQuestion === index
                     ? "bg-white/20 text-white"
                     : "bg-[#9D1B23] text-white"

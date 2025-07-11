@@ -13,7 +13,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7];
 export default function Discover() {
   return (
     <div
-      className="relative w-full py-20 px-6 mt-40"
+      className="relative w-full py-20 px-4 md:px-6 mt-40"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -22,39 +22,42 @@ export default function Discover() {
     >
       {/* Content Container */}
       <div className="max-w-7xl mx-auto text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
+        <h2 className="text-2xl md:text-4xl font-semibold text-white">
           Discover the <span className="text-pink-400">AI-Powered</span> Designs
-          <br /> We’ve Brought to Life
+          <br className="hidden md:block" /> We’ve Brought to Life
         </h2>
-        <p className="text-gray-200 max-w-xl mx-auto">
+        <p className="text-sm md:text-base text-gray-200 max-w-xl mx-auto">
           Showcasing real, creative designs crafted through cutting-edge AI tools.
         </p>
 
         {/* Category Buttons */}
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-wrap justify-center gap-3">
           {["Graphic design", "Motion graphics", "Brand video"].map((category, index) => (
             <button
               key={index}
-              className="px-4 py-2 rounded-full border border-gray-500 text-white hover:bg-pink-500 hover:border-pink-500 transition"
+              className="px-4 py-2 rounded-full border border-gray-500 text-white hover:bg-pink-500 hover:border-pink-500 transition text-sm md:text-base"
             >
               {category}
             </button>
           ))}
         </div>
-
-        {/* Cards */}
-        
       </div>
-      <div className="flex  gap-6 pt-10 pb-4 ">
-          {images.map((imgSrc, index) => (
-            <div
-              key={index}
-              className="min-w-[250px] max-w-[250px] rounded-2xl overflow-hidden"
-            >
-              <img src={imgSrc} alt={`Design ${index + 1}`} className="w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
+
+      {/* Cards Carousel */}
+      <div className="flex overflow-x-auto gap-4 pt-10 pb-4 scrollbar-hide md:justify-center">
+        {images.map((imgSrc, index) => (
+          <div
+            key={index}
+            className="min-w-[250px] max-w-[250px] rounded-2xl overflow-hidden flex-shrink-0"
+          >
+            <img
+              src={imgSrc}
+              alt={`Design ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
