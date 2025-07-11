@@ -30,12 +30,12 @@ const Banner = () => {
         <img src={Banners} alt="Banner" className="w-full object-cover max-h-[700px]" />
 
         {/* Floating PNG Icons (hide on small screens) */}
-        <img src={banner1} alt="" className="hidden md:block absolute top-[32%] left-[17%] w-10 md:w-16 animate-float-slow" />
+        <img src={banner1} alt="" className="hidden md:block absolute top-[29%] left-[17%] w-10 md:w-16 animate-float-slow" />
         <img src={banner2} alt="" className="hidden md:block absolute top-[52%] left-[17%] w-12 md:w-20 animate-float-fast" />
         <img src={banner3} alt="" className="hidden md:block absolute top-[52%] left-[29%] w-14 md:w-22 animate-float-slow" />
         <img src={banner5} alt="" className="hidden md:block absolute top-[48%] left-[72%] w-12 md:w-18 animate-float-fast" />
         <img src={banner4} alt="" className="hidden md:block absolute top-[42%] left-[82%] w-14 md:w-22 animate-float-slow" />
-        <img src={banner6} alt="" className="hidden md:block absolute top-[64%] left-[78%] w-12 md:w-18 animate-float-fast" />
+        <img src={banner6} alt="" className="hidden md:block absolute top-[68%] left-[78%] w-12 md:w-18 animate-float-fast" />
 
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
