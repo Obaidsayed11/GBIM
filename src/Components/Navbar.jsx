@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from "../assets/Images/logo.png"
+import { Phone } from 'lucide-react';
+import phone from '../assets/Icons/phone.png'
 
 const Navbar = () => {
   return (
@@ -50,22 +52,15 @@ const Navbar = () => {
       </ul>
 
       {/* CTA Button */}
-      <button className="flex items-center px-5 py-2 bg-[#9E1C1C] text-white font-bold rounded-full hover:bg-red-800 transition duration-300 h-[70px] w-[300px]">
-        <svg
-          className="w-5 h-5 mr-2"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15 12h.01M9 12h.01M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-        <h1> Schedule A Call</h1>
-      </button>
+   <button className="flex items-center bg-[#9E1C1C] text-white font-bold rounded-full hover:bg-red-800 transition duration-300 h-[70px] w-[300px]">
+  <span className="flex items-center justify-center w-10 h-10 border border-white rounded-full mr-3 ml-4">
+     <img src={phone} className="w-5 h-5" />
+  </span>
+  <h1 className='text-2xl'> Schedule A Call</h1>
+ 
+</button>
+
+
     </nav>
   );
 };

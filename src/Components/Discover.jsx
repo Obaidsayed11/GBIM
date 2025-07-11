@@ -13,7 +13,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7];
 export default function Discover() {
   return (
     <div
-      className="relative w-full py-20 px-6"
+      className="relative w-full py-20 px-6 mt-40"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",

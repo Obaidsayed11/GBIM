@@ -1,18 +1,22 @@
 import React from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import facebook from  "../assets/Icons/facebook.png"
+import instagram from  "../assets/Icons/instagram.png"
+import youtube from  "../assets/Icons/youtube.png"
 
 export default function ContactSection() {
   return (
     <section
       className="w-full py-20 px-6 md:px-10"
       style={{
-        background: "linear-gradient(90deg, #0c0c0c 0%, #0c0c0c 40%, #1a1a1a 100%)",
+        background:
+          "linear-gradient(90deg, #0c0c0c 0%, #0c0c0c 40%, #1a1a1a 100%)",
         color: "white",
       }}
     >
       <div className="flex flex-col md:flex-row w-full h-full">
         {/* Left Side */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8 px-4 md:px-8">
+        <div className="w-full md:w-1/2 flex flex-col justify-center mx-40 space-y-8 px-4 md:px-8">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold leading-tight">
               Ready to <span className="text-[#D13636]">Grow</span>
@@ -25,61 +29,97 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Details */}
-          <div className="space-y-4 ">
-            <div className="flex gap-4">
+          <div className="space-y-4 w-[100%]">
+            <div className="flex gap-8">
               <div className="bg-[#1a1a1a] p-4 rounded-lg flex items-center gap-3 w-full">
                 <MapPin className="w-5 h-5 text-[#D13636]" />
                 <div>
-                  <p className="font-semibold text-sm">Office</p>
-                  <p className="text-xs text-[#b5b5b5]">1404-1405, Rupa Solitaire</p>
+                  <p className="font-semibold text-lg">Office</p>
+                  <p className="text-sm text-[#b5b5b5]">
+                    1404-1405, Rupa Solitaire
+                  </p>
                 </div>
               </div>
               <div className="bg-[#1a1a1a] p-4 rounded-lg flex items-center gap-3 w-full">
                 <Phone className="w-5 h-5 text-[#D13636]" />
                 <div>
-                  <p className="font-semibold text-sm">Phone</p>
-                  <p className="text-xs text-[#b5b5b5]">+91 2368712973</p>
+                  <p className="font-semibold text-lg">Phone</p>
+                  <p className="text-sm text-[#b5b5b5]">+91 2368712973</p>
                 </div>
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-8">
               <div className="bg-[#1a1a1a] p-4 rounded-lg flex items-center gap-3 w-full">
                 <Clock className="w-5 h-5 text-[#D13636]" />
                 <div>
-                  <p className="font-semibold text-sm">Working hours</p>
-                  <p className="text-xs text-[#b5b5b5]">Mon - Fri, 9:30 am to 6:30 pm</p>
+                  <p className="font-semibold text-lg">Working hours</p>
+                  <p className="text-sm text-[#b5b5b5]">
+                    Mon - Fri, 9:30 am to 6:30 pm
+                  </p>
                 </div>
               </div>
               <div className="bg-[#1a1a1a] p-4 rounded-lg flex items-center gap-3 w-full">
                 <Mail className="w-5 h-5 text-[#D13636]" />
                 <div>
-                  <p className="font-semibold text-sm">Email</p>
-                  <p className="text-xs text-[#b5b5b5]">sales@gbim.com</p>
+                  <p className="font-semibold text-lg">Email</p>
+                  <p className="text-sm text-[#b5b5b5]">sales@gbim.com</p>
                 </div>
               </div>
             </div>
           </div>
+          <hr />
 
-          <div className="mt-8">
-            <p className="text-xs text-[#d7d7d7] mb-3">Social media :</p>
+         
+
+          <div className="mt-4 flex flex-row justify-between items-center">
+            <p className="text-lg text-[#d7d7d7]">Social media :</p>
             <div className="flex gap-4">
-              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[#D13636] transition">f</a>
-              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[#D13636] transition">IG</a>
-              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[#D13636] transition">▶</a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[#D13636] transition"
+              >
+                <img src={facebook} alt="" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[#D13636] transition"
+              >
+                <img src={instagram} alt="" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[#D13636] transition"
+              >
+                <img src={youtube} alt="" />
+              </a>
             </div>
           </div>
         </div>
 
         {/* Right Side Form */}
-        <div className="w-full md:w-1/2 flex justify-center items-center -mt-80">
-          <div className="bg-gradient-to-b from-[#2a2a2a5b] to-[#1a1a1a] backdrop-blur-xl rounded-3xl p-8 space-y-6 w-full max-w-[500px]">
-            <h3 className="text-lg font-semibold text-white">Leave us a message</h3>
+        <div className="w-full md:w-1/2 flex justify-center items-center -mt-40">
+          <div className="bg-gradient-to-b from-[#2a2a2a5b] to-[#1a1a1a] backdrop-blur-xl rounded-3xl p-8 space-y-6 w-full max-w-[600px] h-[700px]">
+            <h3 className="text-2xl font-semibold text-white">
+              Leave us a message
+            </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none" placeholder="Name" />
-              <input className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none" placeholder="Email" />
-              <input className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none" placeholder="Phone number" />
-              <input className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none" placeholder="Website" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+              <input
+                className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none"
+                placeholder="Name"
+              />
+              <input
+                className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none"
+                placeholder="Email"
+              />
+              <input
+                className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none"
+                placeholder="Phone number"
+              />
+              <input
+                className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] focus:outline-none"
+                placeholder="Website"
+              />
               <select className="bg-transparent border border-[#393939] p-3 rounded-md text-sm text-[#7a7a7a]">
                 <option>Service</option>
               </select>
@@ -89,10 +129,14 @@ export default function ContactSection() {
               <select className="bg-transparent border border-[#393939] p-3 rounded-md text-sm text-[#7a7a7a] md:col-span-2">
                 <option>How did you hear about us?</option>
               </select>
-              <textarea className="bg-transparent border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] md:col-span-2" rows="4" placeholder="Tell us more about your project" />
+              <textarea
+                className="bg-transparent h-[200px] border border-[#393939] p-3 rounded-md text-sm placeholder-[#7a7a7a] md:col-span-2 resize-none"
+                rows="4"
+                placeholder="Tell us more about your project"
+              />
             </div>
 
-            <button className="bg-white text-black font-semibold rounded-full py-3 px-10 hover:bg-[#f0f0f0] transition">
+            <button className="bg-white w-full text-black font-semibold text-lg rounded-3xl py-3 px-10 hover:bg-[#f0f0f0] transition">
               Submit
             </button>
           </div>

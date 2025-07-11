@@ -58,23 +58,18 @@ const Marquee = ({ children, direction = "left", speed = 50 }) => {
 
 export default function DesignBanner() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white space-y-8 w-[100vw] ">
-      <div className="text-xs tracking-widest text-gray-500 uppercase">
-        Design Beyond Boundaries
-      </div>
-
-      <div className="text-center border px-6 py-4 max-w-4xl">
-        <p className="text-xl font-medium text-gray-900">
-          <span className="text-red-600 font-semibold">
-            We help you solve complex problems through human-centered,{" "}
-          </span>
-          <span className="text-purple-900 font-bold">
-            creative design solutions
-          </span>
+    <div className="flex flex-col items-center justify-center  bg-white space-y-8 w-[100vw] mt-40">
+      <div className="max-w-7xl mx-auto text-center space-y-6">
+        <p className="text-sm tracking-[0.2em] uppercase text-gray-400">
+          DESIGN BEYOND BOUNDARIES
         </p>
-      </div>
+        <h2 className="text-3xl font-semibold text-[#7C0D37]">
+          We help you solve complex problems through <br/>
+          <span className="font-bold text-[#1D0F5F]">Human-centered, creative design solutions.</span>
+        </h2>
+        </div>
 
-      <div className="w-full max-w-6xl space-y-4">
+      <div className="w-full space-y-4">
         <Marquee direction="right" speed={15}>
           {tagsTop.map((tag, index) => (
             <span

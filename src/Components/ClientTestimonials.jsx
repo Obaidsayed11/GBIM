@@ -25,7 +25,7 @@ export default function ClientTestimonials() {
   const [activeCategory, setActiveCategory] = useState("E-Commerce");
 
   return (
-    <div className="bg-[#FAFAFA] py-20 px-6 w-full h-[140vh]">
+    <div className="bg-[#FAFAFA] py-20 px-6 w-full h-[100vh]">
       <div className="max-w-7xl mx-auto text-center space-y-6">
         <p className="text-sm tracking-[0.2em] uppercase text-gray-400">
           Our Happy Clients
